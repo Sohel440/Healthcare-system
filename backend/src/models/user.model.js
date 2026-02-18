@@ -27,6 +27,9 @@ const userSchema = new mongoose.Schema(
       type: String,
     },
     fees:String,
+    description:{
+      type:String
+    },
     avatar:{
         type: String,
         default: 'https://img.freepik.com/premium-vector/avatar-guest-vector-icon-illustration_1304166-97.jpg'
