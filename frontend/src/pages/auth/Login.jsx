@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  loginUser,
   removeError,
   removeMessage,
   removeSuccess,
 } from "../../features/auth/authSlice";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { loginUser } from "../../features/auth/authThunk";
 
 const Login = () => {
   const dispatch = useDispatch();

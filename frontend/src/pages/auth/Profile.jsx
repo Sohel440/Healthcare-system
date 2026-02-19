@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateProfile } from "../../features/auth/authSlice";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
+import { updateProfile } from "../../features/auth/authThunk";
 
 const Profile = () => {
   const dispatch = useDispatch();
