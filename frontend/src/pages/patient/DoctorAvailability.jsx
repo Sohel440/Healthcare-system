@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import toast from "react-hot-toast";
 import {
+  bookAppointment,
   fetchAvailableDates,
   fetchAvailableSlots,
-  bookAppointment,
-} from "../../features/patient/patientSlice";
-import toast from "react-hot-toast";
+} from "../../features/patient/patientThunk";
 
 const DoctorAvailability = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const { availableDates, availableSlots } = useSelector(
-    (state) => state.patient
+    (state) => state.patient,
   );
 
   const [selectedDate, setSelectedDate] = useState(null);
@@ -34,16 +34,15 @@ const DoctorAvailability = () => {
           doctorId: id,
           date: selectedDate,
           timeSlot,
-        })
+        }),
       );
 
       toast.success("Booking successful, check history", {
         position: "top-center",
       });
-      
+
       // 2. Use "selectedDate" instead of the undefined "date" variable
       dispatch(fetchAvailableSlots({ doctorId: id, date: selectedDate }));
-      
     } catch (error) {
       toast.error("Booking failed");
       console.log(error);
