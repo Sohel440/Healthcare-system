@@ -3,12 +3,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import api from "../service/axios.js";
 import {
-  logoutUser,
   removeError,
   removeMessage,
   removeSuccess,
 } from "../features/auth/authSlice.js";
 import toast from "react-hot-toast";
+import { logoutUser } from "../features/auth/authThunk.js";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
