@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUsers } from "../../features/admin/adminSlice";
-import { fetchAllAppointments } from "../../features/admin/adminSlice";
 import Navbar from "../../components/Navbar";
+import { fetchAllAppointments, fetchUsers } from "../../features/admin/adminThunk";
 
 const AdminDashboard = () => {
   const dispatch = useDispatch();
