@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { cancelAppointment, fetchMyAppointments } from "../../features/patient/patientSlice";
+import { cancelAppointment, fetchMyAppointments } from "../../features/patient/patientThunk";
+
 
 const MyAppointments = () => {
   const dispatch = useDispatch();
