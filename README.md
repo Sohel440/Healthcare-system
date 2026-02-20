@@ -218,9 +218,8 @@ npm install
 ### 3️⃣ Create .env File
 ```
 PORT=8000
-MONGO_URI=your_mongodb_connection_string
+DB=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
-JWT_EXPIRES_IN=7d
 ```
 
 ### 4️⃣ Run Server
