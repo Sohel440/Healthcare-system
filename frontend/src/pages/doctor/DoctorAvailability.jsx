@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { markAvailability } from "../../features/doctor/doctorSlice";
+import { markAvailability } from "../../features/doctor/doctorThunk";
 import toast from "react-hot-toast";
 
 const DoctorAvailability = () => {
