@@ -1,15 +1,14 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  fetchDoctorAppointments,
   removeError,
-  removeMessage,
-  updateAppointmentStatus,
+  removeMessage
 } from "../../features/doctor/doctorSlice";
 import toast from "react-hot-toast";
 import Navbar from "../../components/Navbar";
 import { Outlet } from "react-router-dom";
 import DoctorAvailability from "./DoctorAvailability";
+import { fetchDoctorAppointments, updateAppointmentStatus } from "../../features/doctor/doctorThunk";
 
 const DoctorDashboard = () => {
   const dispatch = useDispatch();
