@@ -14,6 +14,7 @@ import DoctorList from "./pages/patient/DoctorList";
 import MyAppointments from "./pages/patient/Myappointments";
 import Profile from "./pages/auth/Profile";
 import { loadUser } from "./features/auth/authThunk";
+import Home from "./pages/Home/Home";
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -25,6 +26,7 @@ const App = () => {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/" element={<Home />} />
 
           <Route
             path="/patient"
