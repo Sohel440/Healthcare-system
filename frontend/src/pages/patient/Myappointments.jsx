@@ -49,7 +49,7 @@ const MyAppointments = () => {
                 <td className="px-6 py-4 capitalize">
                   <span className={`font-medium ${
                     appt.status?.toLowerCase() === "pending" ? "text-yellow-600" :
-                    appt.status?.toLowerCase() === "confirmed" ? "text-green-600" :
+                    appt.status?.toLowerCase() === "approved" ? "text-green-600" :
                     appt.status?.toLowerCase() === "cancelled" ? "text-red-600" : "text-gray-600"
                   }`}>
                     {appt.status}

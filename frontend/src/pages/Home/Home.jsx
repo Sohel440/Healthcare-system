@@ -10,7 +10,7 @@ const Home = () => {
       <Navbar />
       
       {/* Added min-h-[80vh] to ensure the section takes up a good amount of screen space */}
-      <main className="bg-gradient-to-r from-blue-50 to-blue-100 py-24 min-h-[80vh] flex items-center">
+      <main className="bg-linear-to-r from-blue-50 to-blue-100 py-24 min-h-[80vh] flex items-center">
         <div className="max-w-4xl mx-auto px-6 flex flex-col items-center text-center">
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight mb-6">
